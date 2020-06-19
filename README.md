@@ -75,7 +75,9 @@ se         funcao
 
 Literais são notações para cadeias de caracteres que representam valores constantes de alguns tipos internos:
 
-- Palavra: Literais de palavra são descritos pelas seguintes definições lexicais:
+##### Palavra
+
+Literais de palavra são descritos pelas seguintes definições lexicais:
 
 ```
 palavraliteral        ::=  palavracurta | palavralonga
@@ -87,7 +89,9 @@ caracterpalavracurta  ::=  <qualquer caracter exceto nova linha ou aspas>
 caracterpalavralonga  ::=  <qualquer caracter>
 ```
 
-- Número: Literais de números inteiros descritos pelas seguintes definições lexicais:
+##### Número
+
+Literais de números inteiros descritos pelas seguintes definições lexicais:
 
 ```
 numero        ::=  digitosemzero (["_"] digito)* | "0"+ (["_"] "0")*
@@ -129,7 +133,7 @@ Nesse capítulo a notação descreve a sintaxe, e não análise léxica.
 
 A Jararaca avalia expressões da esquerda para a direita.
 
-#### Atomos
+#### 3.1.1 Atomos
 
 Os átomos são os elementos mais básicos das expressões. Os átomos são identificadores ou literais.
 
@@ -137,7 +141,7 @@ Os átomos são os elementos mais básicos das expressões. Os átomos são iden
 atomo ::=  identificador | literal
 ```
 
-#### Literais
+#### 3.1.2 Literais
 
 Literais suportam palavras e números. Todos as literais correspondem a tipos de dados imutáveis.
 
@@ -145,13 +149,13 @@ Literais suportam palavras e números. Todos as literais correspondem a tipos de
 literal ::=  palavra | numero
 ```
 
-#### Aritméticas
+#### 3.1.3 Aritméticas
 
 ```
 aritmetica ::=  "-" | "+" | "*" | "/"
 ```
 
-#### Comparações
+#### 3.1.4 Comparações
 
 Todas as operações de comparação na Jararaca têm a mesma prioridade, menor que a de qualquer aritmética.
 
@@ -175,7 +179,7 @@ chamada ::=  identificador "()"
 
 Dentro dos blocos de código existem *declarações*. Essas são as instruções que um intérprete Jararaca pode executar.
 
-#### Declarações Simples
+#### 3.2.1 Declarações Simples
 
 Uma declaração simples é composta dentro de uma única linha lógica. A sintaxe para instruções simples é:
 
@@ -192,7 +196,7 @@ As instruções de atribuição são usadas para (re) vincular identificadores a
 
 Quebra só pode ocorrer sintaticamente aninhado em um loop ``enquanto``, mas não aninhado em uma definição de função desse loop.
 
-#### Declarações Compostas
+#### 3.2.2 Declarações Compostas
 
 Instruções compostas contêm (grupos de) outras instruções; eles afetam ou controlam a execução dessas outras instruções de alguma forma. Em geral, declarações compostas abrangem várias linhas.
 
